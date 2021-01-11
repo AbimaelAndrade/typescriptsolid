@@ -10,6 +10,7 @@ export interface ShoppingCartProtocol {
 
   total(): number;
 
+  totalWithDiscount(): number;
 
   isEmpty(): boolean;
 
