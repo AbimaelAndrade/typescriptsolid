@@ -1,6 +1,6 @@
 type CartItem = {
-  name: string,
-  price: number
+  name: string;
+  price: number;
 };
 
 type OrderStatus = 'open' | 'closed';
@@ -10,7 +10,7 @@ export class ShoppingCartLegacy {
   private _orderStatus: OrderStatus = 'open';
 
   addItem(item: CartItem): void {
-    this._items.push(item)
+    this._items.push(item);
   }
 
   removeItem(index: number): void {
@@ -26,12 +26,14 @@ export class ShoppingCartLegacy {
   }
 
   total(): number {
-    return +this._items.reduce((total, next) => total + next.price, 0).toFixed(2);
+    return +this._items
+      .reduce((total, next) => total + next.price, 0)
+      .toFixed(2);
   }
 
   chekout(): void {
-    if(this.isEmpty()){
-      console.log("this cart is empty");
+    if (this.isEmpty()) {
+      console.log('this cart is empty');
       return;
     }
 

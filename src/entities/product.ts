@@ -1,9 +1,5 @@
-import { CartItemProtocol } from "./protocols";
+import { CartItemProtocol } from './protocols';
 
 export class Product implements CartItemProtocol {
-  constructor(
-    public name: string,
-    public price: number
-  ){}
-
+  constructor(public name: string, public price: number) {}
 }

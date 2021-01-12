@@ -1,15 +1,13 @@
-import { Discount, NoDiscount } from "./discount";
-import { CartItemProtocol, ShoppingCartProtocol } from "./protocols";
+import { Discount, NoDiscount } from './discount';
+import { CartItemProtocol, ShoppingCartProtocol } from './protocols';
 
-export class ShoppingCart implements ShoppingCartProtocol{
+export class ShoppingCart implements ShoppingCartProtocol {
   private readonly _items: CartItemProtocol[] = [];
 
-  constructor(
-    private readonly discount: Discount = new NoDiscount()
-  ){}
+  constructor(private readonly discount: Discount = new NoDiscount()) {}
 
   addItem(item: CartItemProtocol): void {
-    this._items.push(item)
+    this._items.push(item);
   }
 
   removeItem(index: number): void {
@@ -21,7 +19,9 @@ export class ShoppingCart implements ShoppingCartProtocol{
   }
 
   total(): number {
-    return +this._items.reduce((total, next) => total + next.price, 0).toFixed(2);
+    return +this._items
+      .reduce((total, next) => total + next.price, 0)
+      .toFixed(2);
   }
 
   totalWithDiscount(): number {
