@@ -4,9 +4,9 @@ const createSut = () => {
   return new Message();
 };
 
-afterEach(() => jest.clearAllMocks());
-
 describe('Repository', () => {
+  afterEach(() => jest.clearAllMocks());
+
   it('should return undefined', () => {
     const sut = createSut();
 

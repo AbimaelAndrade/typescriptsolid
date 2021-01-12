@@ -1,8 +1,8 @@
 import { Repository } from './repository';
 
-afterEach(() => jest.clearAllMocks());
-
 describe('Repository', () => {
+  afterEach(() => jest.clearAllMocks());
+
   it('should return undefined', () => {
     const sut = new Repository();
 
