@@ -4,3 +4,8 @@ export { MessageProtocol } from './message.protocol';
 export { RepositoryProtocol } from './repository.protocol';
 export { ShoppingCartProtocol } from './shopping-cart.protocol';
 export { OrderProtocol } from './order.protocol';
+export {
+  IndividualCustomerProtocol,
+  EnterpriseCustomerProtocol,
+  CustomerProtocol,
+} from './customer.protocol';
